@@ -8,7 +8,11 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index ]
   resources :splashes, only: %i[index ]
-  # Defines the root path route ("/")
-  root to: "users#index"
 
+  resources :users, only: %i[index show] do
+    resources :groups, only: %i[index new show create destroy]
+    resources :deals, only: %i[index new show create destroy]
+  end
+
+  root to: "users#index"
 end
