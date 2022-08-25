@@ -9,7 +9,7 @@ class Group < ApplicationRecord
 
   def amount
     amount = 0
-    deals.each{|deal| amount += deal.amount}
+    deals.each { |deal| amount += deal.amount }
     amount
   end
 end

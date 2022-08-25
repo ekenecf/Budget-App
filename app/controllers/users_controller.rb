@@ -6,5 +6,4 @@ class UsersController < ApplicationController
       render '/splashes/index'
     end
   end
-
 end
