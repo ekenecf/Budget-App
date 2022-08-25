@@ -1,5 +1,7 @@
 <h1> All deals </h1>
 
+<p>Total_transaction_deal: <%= @total_deal %></p>
+
 <% @deals.each do |deal| %>
     <p>Deal name: <%= deal.name %> </p>
     <p>Deal amount: <%= deal.amount %> </p> <br>

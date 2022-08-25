@@ -7,6 +7,7 @@
 <p>No added deal!</p>
 
 <%else %>
+<p>Total_Expenses: <%= @total_expenses %> </p>
  <%= @deals.each do |deal| %>
     <p>Amount: <%= deal.amount %></P>
     <% end %>

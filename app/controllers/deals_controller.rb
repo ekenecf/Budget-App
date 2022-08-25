@@ -3,6 +3,7 @@ class DealsController < ApplicationController
 
   def index
     @deals = Deal.includes(:user).where(user: current_user).order(created_at: :desc)
+    @total_deal = @deals.sum(&:amount)
   end
 
   def new
@@ -27,7 +28,7 @@ class DealsController < ApplicationController
       created_deal.groups << @group
       puts @group, created_deal.groups
       flash[:notice] = 'deal created successfully.'
-      redirect_to user_groups_path(current_user, created_deal)
+      redirect_to user_deals_path(current_user, created_deal)
     else
       flash[:error] = 'deal creation unsucessful!'
       @deal = created_deal

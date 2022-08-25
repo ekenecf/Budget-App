@@ -2,11 +2,12 @@ class GroupsController < ApplicationController
   before_action :set_group_params, only: %i[show edit destroy]
 
   def index
-    @groups = Group.includes(:user).where(user: current_user)
+    @groups = Group.includes(:deals).where(user: current_user)
   end
 
   def show
     @deals = @group.deals
+    @total_expenses = @deals.includes(:groups).where(user: current_user).sum(&:amount)
   end
 
   def new
@@ -20,7 +21,7 @@ class GroupsController < ApplicationController
 
     if created_group.save
       flash[:notice] = 'group created successfully.'
-      redirect_to user_groups_path(current_user, created_group)
+      redirect_to users_path(current_user)
     else
       flash[:error] = 'group create unsucessful!'
       @group = created_group
