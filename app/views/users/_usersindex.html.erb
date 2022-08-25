@@ -1,0 +1,16 @@
+<h2>Welcome <%= current_user.name %>! </h2>
+<% if current_user.groups.empty? %>
+<p>No group added yet! Kindly add a group</p>
+<% end %>
+
+<% current_user.groups.each do |user_group|%> 
+
+   <%= link_to user_deals_path(current_user, user_group.deals) do %>
+<h2>Group name: <%= user_group.name %> </h2>
+<div>Group image: <img src=<%= user_group.icon %> alt="Group Icon" ></div><br><br>
+<p><%= link_to "Group detail", user_group_path(current_user, user_group) %></p>
+
+<% end%>
+<% end%>
+
+<p><%= link_to "Add a new group", new_user_group_path(current_user, current_user.groups) %></p>

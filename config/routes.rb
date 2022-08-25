@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[index ]
   resources :splashes, only: %i[index ]
 
-  resources :users, only: %i[index show] do
+  resources :users, only: %i[index ] do
     resources :groups, only: %i[index new show create destroy]
     resources :deals, only: %i[index new show create destroy]
   end

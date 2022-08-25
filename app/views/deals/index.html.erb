@@ -1,0 +1,8 @@
+<h1> All deals </h1>
+
+<% @deals.each do |deal| %>
+    <p>Deal name: <%= deal.name %> </p>
+    <p>Deal amount: <%= deal.amount %> </p> <br>
+<%end %>
+<p><%= link_to "Add a new deal", new_user_deal_path(current_user, @groups) %></p>
+<p><%= link_to "Back to user", users_path %></p>
