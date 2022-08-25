@@ -1,0 +1,20 @@
+<div>
+<p>Group name: <%= @group.name %></p>
+<p> Group Icon: <%= @group.icon %></p>
+<p> Group ID: <%= @group.id %></p>
+
+<% if @deals.empty? %>
+<p>No added deal!</p>
+
+<%else %>
+<p>Total_Expenses: <%= @total_expenses %> </p>
+ <%= @deals.each do |deal| %>
+    <p>Amount: <%= deal.amount %></P>
+    <% end %>
+<% end %>
+
+<p><%= link_to "Add a new group", new_user_group_path(current_user, @group) %></p>
+<p><%= link_to "Back to user", users_path %></p>
+<p><%= link_to "Add a new deal", new_user_deal_path(current_user, @group) %></p>
+
+</div>

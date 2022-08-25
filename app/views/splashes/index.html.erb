@@ -1,3 +1,5 @@
+
+<% unless user_signed_in? %>
 <div >
 <h1> Budget App </h1>
 <h2> A mobile web application where you can manage your budget
@@ -8,3 +10,4 @@ so that you can see how much money you spent and on what.
 <p><%= link_to "Sign in",  new_user_session_path %></p>
 <p><%= link_to "Sign up",  new_user_registration_path %></p>
 </div>
+<% end %>

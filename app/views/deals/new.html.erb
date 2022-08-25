@@ -1,0 +1,16 @@
+<%= form_with model: @deal, url: user_deals_path, method: :post do |form| %>
+
+  <p><%= link_to "Back to Deals page", user_deals_path %></p>
+
+    <div >
+       <%= form.label :name %>
+       <%= form.text_field :name %>
+
+       <%= form.label :amount %>
+       <%= form.text_field :amount %>
+
+       <%= form.select :group_id, @groups&.map{ |group| [group.name, group.id] }, { :prompt => 'Select Group'} %>
+
+       <%= form.submit "Create Deal"%>
+     </div>
+<% end %>
