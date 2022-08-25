@@ -7,9 +7,9 @@ class Group < ApplicationRecord
   validates :name, presence: true
   validates :icon, presence: true
 
-  def amount
-    amount = 0
-    deals.each { |deal| amount += deal.amount }
-    amount
-  end
+  # def amount
+  #   amount = 0
+  #   deals.each { |deal| amount += deal.amount }
+  #   amount
+  # end
 end
