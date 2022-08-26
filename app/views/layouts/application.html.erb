@@ -8,17 +8,33 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
+
   </head>
 
   <body>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+  <% if user_signed_in? %>
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+  <h2 class="navbar-brand" >BudgetApp By Ekene</h2>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-       <% if user_signed_in? %>
-     
-       <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-
-       <% end %>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-5">
+      <li class="nav-item active">
+        <a class="navbar-brand" href="/users">Home </a>
+      </li>
+      <li class="nav-item">
+        <%=  link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-brand" %>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <% end %>
 
     <%= yield %>
   </body>
