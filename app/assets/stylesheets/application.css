@@ -1,15 +1,109 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+#home_page {
+  text-align: center;
+}
+
+#row {
+  display: flex;
+  justify-content: center;
+
+  --bs-gutter-x: 0;
+
+  -webkit-animation: firstplansec 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: FirstPlanSec  0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#row2 {
+  display: flex;
+  justify-content: center;
+  margin-inline: 20rem;
+}
+
+@-webkit-keyframes FirstPlanSec {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+
+@keyframes FirstPlanSec {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+
+.card {
+  transform: scale(1);
+  transition: all 300ms;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card-image {
+  margin-right: 5%;
+}
+
+#links {
+  display: flex;
+  gap: 5%;
+}
+
+#deals_header {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.container p {
+  font-size: 1.4rem;
+}
+
+#splash {
+  margin-top: 1%;
+  margin-inline: 20rem;
+}
+
+#splash_paragraph {
+  font-size: 30px;
+}
+
+#card-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+}
+
+@media screen and (max-width: 768px) {
+  #row2 {
+    margin-inline: 0;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+}

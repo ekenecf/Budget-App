@@ -1,13 +1,11 @@
-
-<% if @groups.empty? %>
-<p>No group added yet!</p>
-<% end %>
+<h1> All groups </h1>
+  <% if @groups.empty? %>
+    <p>No group added yet!</p>
+  <% end %>
 
 <% @groups.each do |group| %>
     <p>Name of group: <%= group.name %>
     <%= button_to "Delete group", user_group_path(current_user, group), method: :delete %>
     <p><%= link_to "Group detail", user_group_path(current_user, group) %></p>
-
-    <% end %>
-    
+<% end %>
     <p><%= link_to "Back to user", users_path %></p>
