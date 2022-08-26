@@ -97,6 +97,10 @@
   gap: 1%;
 }
 
+#log_in {
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   #row2 {
     margin-inline: 0;
@@ -105,5 +109,13 @@
   .form-group {
     display: flex;
     flex-direction: column;
+  }
+
+  #splash {
+    margin-inline: 0;
+  }
+
+  .card:hover {
+    transform: scale(1);
   }
 }
