@@ -5,9 +5,7 @@
 #row {
   display: flex;
   justify-content: center;
-
   --bs-gutter-x: 0;
-
   -webkit-animation: firstplansec 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: FirstPlanSec  0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -97,6 +95,10 @@
   gap: 1%;
 }
 
+#log_in {
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
   #row2 {
     margin-inline: 0;
@@ -105,5 +107,13 @@
   .form-group {
     display: flex;
     flex-direction: column;
+  }
+
+  #splash {
+    margin-inline: 0;
+  }
+
+  .card:hover {
+    transform: scale(1);
   }
 }
