@@ -1,13 +1,15 @@
 #home_page {
-    text-align: center;
+  text-align: center;
 }
 
-#row  {
-    display: flex;
-    justify-content: center;
-    --bs-gutter-x: 0rem;
-	-webkit-animation: FirstPlanSec 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: FirstPlanSec  0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+#row {
+  display: flex;
+  justify-content: center;
+
+  --bs-gutter-x: 0;
+
+  -webkit-animation: firstplansec 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: FirstPlanSec  0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 #row2 {
@@ -16,35 +18,38 @@
   margin-inline: 20rem;
 }
 
-@-webkit-keyframes FirstPlanSec  {
+@-webkit-keyframes FirstPlanSec {
   0% {
     -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-            transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
     -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     opacity: 0;
   }
+
   100% {
     -webkit-transform: translateY(0) rotateX(0) scale(1);
-            transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
     -webkit-transform-origin: 50% 1400px;
-            transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
     opacity: 1;
   }
 }
-@keyframes FirstPlanSec  {
+
+@keyframes FirstPlanSec {
   0% {
     -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
-            transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
     -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
     opacity: 0;
   }
+
   100% {
     -webkit-transform: translateY(0) rotateX(0) scale(1);
-            transform: translateY(0) rotateX(0) scale(1);
+    transform: translateY(0) rotateX(0) scale(1);
     -webkit-transform-origin: 50% 1400px;
-            transform-origin: 50% 1400px;
+    transform-origin: 50% 1400px;
     opacity: 1;
   }
 }
@@ -92,13 +97,13 @@
   gap: 1%;
 }
 
-/* #splash_body {
-  border: white;
-} */
-
 @media screen and (max-width: 768px) {
-
   #row2 {
     margin-inline: 0;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Recipe', type: :request do
   describe 'GET #index' do
     let(:user) do
-      User.create!(name: 'Ekene', email: 'example@gmail.com', password: 111112)
+      User.create!(name: 'Ekene', email: 'example@gmail.com', password: 111_112)
     end
 
     before(:example) { get user_groups_path(user, user.groups) }
@@ -13,7 +13,7 @@ RSpec.describe 'Recipe', type: :request do
     end
 
     it 'renders correct page contents' do
-        expect(response.body).to include('No group added')
+      expect(response.body).to include('No group added')
     end
 
     it 'renders index template' do

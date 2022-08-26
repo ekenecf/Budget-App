@@ -1,5 +1,4 @@
 <div id="home_page">
-
   <h2>Welcome <%= current_user.name %>, here is a group of all your transaction </h2>
   <h2>Total_deals: <%= current_user.deals.sum(&:amount) %> </h2>
   <p><%= link_to "Add a new group", new_user_group_path(current_user, current_user.groups), class:"btn btn-primary" %></p>

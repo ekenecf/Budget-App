@@ -1,6 +1,6 @@
 <h1>Create new group</h1>
 
-<%= form_with model: @group, url: user_groups_path, method: :post, local: true do |f| %>
+<%= form_with model: @group, class: "form-group", url: user_groups_path, method: :post, local: true do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :icon %>

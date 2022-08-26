@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-    subject do
-        user1 =  User.new(name: 'new_user', email: 'user@user.com', password: 111111)
-        Group.create(user: user1, name: 'Group1', icon: 'Icon1')
-    end
+  subject do
+    user1 = User.new(name: 'new_user', email: 'user@user.com', password: 111_111)
+    Group.create(user: user1, name: 'Group1', icon: 'Icon1')
+  end
 
   before { subject.save! }
 

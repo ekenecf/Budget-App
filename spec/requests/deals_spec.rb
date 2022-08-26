@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Recipe', type: :request do
   describe 'GET #index' do
     let(:user) do
-      User.create!(name: 'Ekene', email: 'example@gmail.com', password: 111112)
+      User.create!(name: 'Ekene', email: 'example@gmail.com', password: 111_112)
     end
     let(:deals) do
       Deal.create!(name: 'Deal1', amount: 10)
@@ -16,7 +16,7 @@ RSpec.describe 'Recipe', type: :request do
     end
 
     it 'renders correct page contents' do
-        expect(response.body).to include('All deals')
+      expect(response.body).to include('All deals')
     end
 
     it 'renders index template' do

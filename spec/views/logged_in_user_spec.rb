@@ -13,7 +13,7 @@ RSpec.feature 'Login Page' do
     end
 
     scenario 'shows my username after user login' do
-      expect(page).to have_content("Welcome example")
+      expect(page).to have_content('Welcome example')
     end
   end
 end
