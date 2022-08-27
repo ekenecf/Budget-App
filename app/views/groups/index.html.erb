@@ -3,8 +3,13 @@
     <p>No group added yet!</p>
   <% end %>
 
+  <p>Total_Transaction amount: <%= @user_deal %></p>
+
 <% @groups.each do |group| %>
     <p>Name of group: <%= group.name %>
+     <% group.deals.each do |deal| %>
+      <p>Transaction amount: <%= deal.amount %>
+      <% end %>
     <%= button_to "Delete group", user_group_path(current_user, group), method: :delete %>
     <p><%= link_to "Group detail", user_group_path(current_user, group) %></p>
 <% end %>
