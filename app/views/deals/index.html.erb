@@ -1,0 +1,15 @@
+<h1 id= "deals_header"> All deals </h1>
+<div class="jumbotron">
+  <div class="container text-center">
+    <p>Total_transaction: $<%= @total_deal %></p>
+
+        <% @deals.each do |deal| %>
+            <p>Deal name: <%= deal.name %> </p>
+            <p>Deal amount: $<%= deal.amount %> </p> <br>
+        <%end %>
+    <div id="deals-link">
+      <p><%= link_to "Add a new deal", new_user_deal_path, class:"btn btn-primary", class:"btn btn-primary" %></p>
+      <p><%= link_to "Back to user", users_path, class:"btn btn-primary", class:"btn btn-primary" %></p>
+    </div>
+  </div>
+</div>

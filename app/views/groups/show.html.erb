@@ -1,0 +1,22 @@
+<div id="row2" class="card">
+  <div class="card-body">
+    <h3 class="card-title mb-3">Group detail with total expenses</h3>
+    <h4 class="card-text">Total_Expenses: $<%= @total_expenses %> </h4>
+    <p class="card-title">Group name: <%= @group.name %></p>
+    <p class="card-image"> Group Icon: <img class="card-img-top" src=<%= @group.icon %> alt="Card image cap"></p>
+
+    <% if @deals.empty? %>
+    <p>No added deal!</p>
+
+    <%else %>
+      <% @deals.each do |deal| %>
+        <p>Spent: $<%= deal.amount %> For <%= deal.name %></P>
+      <% end %>
+    <% end %>
+    <div id="links">
+      <p><%= link_to "Add a new group", new_user_group_path(current_user, @group), class:"btn btn-primary" %></p>
+      <p><%= link_to "Back to user", users_path, class:"btn btn-primary" %></p>
+      <p><%= link_to "Add a new deal", new_user_deal_path(current_user, @group), class:"btn btn-primary" %></p>
+    </div>
+  </div>
+</div>
