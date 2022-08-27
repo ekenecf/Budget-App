@@ -1,4 +1,5 @@
-#home_page, #splash_header {
+#home_page,
+#splash_header {
   text-align: center;
 }
 
@@ -146,5 +147,5 @@
 
   #card-btn {
     flex: 0;
-}
+  }
 }
