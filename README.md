@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # SuperBudget-app
 
-![image](app/assets/images/budget_app.png)
+![image](app/assets/images/my_budget_app_capstone.png)
 ![image](app/assets/images/budget_app_desktop.png)
 
 

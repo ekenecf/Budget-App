@@ -1,4 +1,5 @@
-#home_page {
+#home_page,
+#splash_header {
   text-align: center;
 }
 
@@ -73,21 +74,41 @@
 }
 
 #deals_header {
+  font-size: 84px;
   text-align: center;
-  margin-bottom: 3%;
+  margin-bottom: 5%;
 }
 
 .container p {
-  font-size: 1.4rem;
+  font-size: 2.4rem;
+}
+
+#deals-link {
+  display: flex;
+  justify-content: center;
+  gap: 1%;
 }
 
 #splash {
-  margin-top: 1%;
-  margin-inline: 20rem;
+  height: 100vh;
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/64/09/7257ad31ca82ae2.jpg");
+  background-size: contain;
+}
+
+.card-body.splash_body {
+  flex: 0;
 }
 
 #splash_paragraph {
-  font-size: 30px;
+  font-family: cursive;
+  font-size: 40px;
+  padding-inline: 2%;
+  color: wheat;
+}
+
+#splash_header {
+  color: rgb(255, 255, 255);
+  margin-bottom: 2%;
 }
 
 #card-btn {
@@ -117,5 +138,14 @@
 
   .card:hover {
     transform: scale(1);
+  }
+
+  #splash_paragraph {
+    font-size: 25px;
+    padding-top: 15%;
+  }
+
+  #card-btn {
+    flex: 0;
   }
 }
