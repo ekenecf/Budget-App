@@ -20,6 +20,8 @@ The Super Budget app is a mobile web application where you can manage your budge
 - rails s
 ```
 
+## Video
+[Video link](https://docs.google.com/document/d/1iDWDkDKjLLYIZ_VOt1dXI2Kr4RqdWqjw-7lMsVL1zwE/edit)
 
 ## Built with
 - Ruby 3.1.2 on Rails 7.0.3.1

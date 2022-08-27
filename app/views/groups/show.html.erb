@@ -1,7 +1,7 @@
 <div id="row2" class="card">
   <div class="card-body">
     <h3 class="card-title mb-3">Group detail with total expenses</h3>
-    <h4 class="card-text">Total_Expenses: <%= @total_expenses %> </h4>
+    <h4 class="card-text">Total_Expenses: $<%= @total_expenses %> </h4>
     <p class="card-title">Group name: <%= @group.name %></p>
     <p class="card-image"> Group Icon: <img class="card-img-top" src=<%= @group.icon %> alt="Card image cap"></p>
 
@@ -10,7 +10,7 @@
 
     <%else %>
       <% @deals.each do |deal| %>
-        <p>Amount spent: <%= deal.amount %></P>
+        <p>Amount spent: $<%= deal.amount %></P>
         <p>Spent on: <%= deal.name %></P>
       <% end %>
     <% end %>
