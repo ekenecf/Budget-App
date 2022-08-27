@@ -3,12 +3,12 @@ class GroupsController < ApplicationController
 
   def index
     @groups = Group.includes(:deals).where(user: current_user)
-    uder_deal = current_user.deals.sum(&:amount)
-    puts uder_deal
+    @user_deal = current_user.deals.sum(&:amount)
+    puts @user_deal
   end
 
   def show
-    @deals = @group.deals
+    @deals = @group.deals.order(created_at: :desc)
     @total_expenses = @deals.includes(:groups).where(user: current_user).sum(:amount)
   end
 

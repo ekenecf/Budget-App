@@ -122,6 +122,10 @@
   text-align: center;
 }
 
+a.navbar-brand {
+  margin-left: 35%;
+}
+
 @media screen and (max-width: 768px) {
   #row2 {
     margin-inline: 0;

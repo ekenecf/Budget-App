@@ -13,6 +13,7 @@ class DealsController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
+    @deal = Deal.includes(:user).find(params[:id])
   end
 
   def create
@@ -25,7 +26,7 @@ class DealsController < ApplicationController
       @group = Group.find(params[:group_id])
       created_deal.groups << @group
       flash[:notice] = 'deal created successfully.'
-      redirect_to user_deals_path(current_user, created_deal)
+      redirect_to user_deal_path(current_user, created_deal)
     else
       flash[:error] = 'deal creation unsucessful!'
       @deal = created_deal
