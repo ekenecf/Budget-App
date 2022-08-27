@@ -10,8 +10,7 @@
 
     <%else %>
       <% @deals.each do |deal| %>
-        <p>Amount spent: $<%= deal.amount %></P>
-        <p>Spent on: <%= deal.name %></P>
+        <p>Spent: $<%= deal.amount %> For <%= deal.name %></P>
       <% end %>
     <% end %>
     <div id="links">

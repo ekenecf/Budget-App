@@ -126,6 +126,11 @@ a.navbar-brand {
   margin-left: 35%;
 }
 
+#Total_group_deal {
+  text-align: center;
+  font-size: 40px;
+}
+
 @media screen and (max-width: 768px) {
   #row2 {
     margin-inline: 0;
