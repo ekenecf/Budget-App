@@ -2,26 +2,23 @@
   <% if @groups.empty? %>
     <p>No group added yet!</p>
   <% end %>
-
   <p id= "Total_group_deal">Total_Transaction amount: <%= @user_deal %></p>
 
     <% @groups.each do |group|%>
       <div id="row" class="row ">
-      <div class="col-sm-7">
-        <div class="card mb-2 shadow-lg p-3 mb-5 bg-white rounded">
-
-          <h5 class="card-title">Name of group: <%= group.name %></h5>
-          <% group.deals.each do |deal| %>
-          <h5 class="card-title">Transaction amount: <%= deal.amount %></h5>
-          <% end %>
-          <div id="links">
-          <%= button_to "Delete group", user_group_path(current_user, group), method: :delete, class:"btn btn-primary" %>
-          <p><%= link_to "Group detail", user_group_path(current_user, group), class:"btn btn-primary" %></p>
-          </div>
-          </div>
-           </div>
+        <div class="col-sm-7">
+          <div class="card mb-2 shadow-lg p-3 mb-5 bg-white rounded">
+              <h5 class="card-title">Name of group: <%= group.name %></h5>
+              <% group.deals.each do |deal| %>
+              <h5 class="card-title">Transaction amount: <%= deal.amount %></h5>
+              <% end %>
+              <div id="links">
+              <%= button_to "Delete group", user_group_path(current_user, group), method: :delete, class:"btn btn-primary" %>
+              <p><%= link_to "Group detail", user_group_path(current_user, group), class:"btn btn-primary" %></p>
+              </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    
     <% end%>

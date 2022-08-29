@@ -15,24 +15,22 @@
   <body>
     <div class="full-height">
       <% if user_signed_in? %>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4"">
-      <div class="container-fluid">
-      <h2 class="navbar-brand" >BudgetApp By Ekene</h2>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav ">
-            <li class="nav-item active ml-4"><a class="navbar-brand" href="/users">Home</a></li>
-    <li class="nav-item active"><%=  link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-brand" %></li>
-    </ul>
-    </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4"">
+          <div class="container-fluid">
+              <h2 class="navbar-brand" >BudgetApp By Ekene</h2>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item active"><a class="navbar-brand" href="/users">Home</a></li>
+                <li class="nav-item active"><%=  link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-brand" %></li>
+              </ul>
+          </div>
+        </nav>
       <% end %>
-      
       <%= yield %>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
-  </div>
+    </div>
   </body>
 </html>
