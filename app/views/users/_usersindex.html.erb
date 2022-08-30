@@ -18,7 +18,7 @@
           <div>
             <h5 class="card-title">Group name: <%= user_group.name %></h5>
             <% user_group.deals.each do |deal|%>
-            <h5 class="card-title">Spent on: $<%= deal.name %></h5>
+            <h5 class="card-title">Spent on: <%= deal.name %></h5>
             <%end%>
             <%= link_to "Group detail", user_group_path(current_user, user_group), class:"btn btn-primary"%>
           </div>
