@@ -8,7 +8,7 @@ class DealsController < ApplicationController
 
   def new
     @deal = Deal.new
-    @groups = current_user.groups.order(:name)
+    @groups = current_user.groups.where(user_id: current_user.id).order(:name)
   end
 
   def show
